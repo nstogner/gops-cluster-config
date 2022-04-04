@@ -4,6 +4,8 @@ metadata:
   name: block-external-services
 spec:
   match:
+    excludedNamespaces:
+      - ingress-nginx
     kinds:
       - apiGroups: [""]
         kinds: ["Service"]
