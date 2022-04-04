@@ -1,0 +1,9 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sBlockExternalServices
+metadata:
+  name: block-external-services
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Service"]
